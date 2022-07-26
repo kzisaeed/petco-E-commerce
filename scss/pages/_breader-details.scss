@@ -1,0 +1,323 @@
+@import '../variable/variables';
+@import '../mixin/mixins';
+
+#details-part{
+    background: url(../images/breeder_details_bg.jpg) no-repeat center;
+    background-size: cover;
+    padding: 110px 0;
+    .item{
+        background: #fff;
+        border: 1px solid #ebebeb;
+        border-radius: 10px;
+        padding: 45px 43px 60px;
+        h4{
+            @include f($ff, 24px, 900, 1.2, #0a303a);
+            margin-bottom: 16px;
+        }
+        p{
+            @include f($ffh, 16px, 400, 28px, #676666);
+            margin-bottom: 15px;
+        }
+        .img{
+            margin: 36px 0;
+            img{
+                width: 100%;
+            }
+        }
+        h5{
+            @include f($ff, 20px, 900, 1.2, #0a303a);
+            padding-bottom: 15px;
+            border-bottom: 1px solid #d8d8da;
+            margin-bottom: 25px;
+        }
+        h6{
+            @include f($ff, 18px, 700, 1, #0a303a);
+            margin-bottom: 5px;
+        }
+        span{
+            @include f($ff, 16px, 700, 1.5, #f04336);
+            display: block;
+            margin-bottom: 25px;
+        }
+        .btn2{
+            .bt{
+                background: #f04336;
+                border: medium none;
+                border-radius: 3px;
+                color: #fff !important;
+                display: inline-flex;
+                align-items: center;
+                font-size: 20px;
+                font-weight: 800;
+                letter-spacing: 0;
+                line-height: 1;
+                padding: 17px 25px;
+                text-align: center;
+                text-transform: capitalize;
+                touch-action: manipulation;
+                transition: all 0.3s ease 0s;
+                vertical-align: middle;
+                white-space: nowrap;
+                font-family: 'Nunito', sans-serif;
+                position: relative;
+                overflow: hidden;
+                img{
+                    width: 20px;
+                    margin-left: 10px;
+                    height: auto;
+                    z-index: 1;
+                }
+                span{
+                    z-index: 1;
+                    @include f($ff, 20px, 800, 1, #fff);
+                    margin-bottom: 0;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 56px;
+                    left: -92px;
+                    width: 200%;
+                    height: 200%;
+                    border-radius: 50%;
+                    background: #0A303A;
+                    transition: .4s;
+                }
+                &:hover::after{
+                    top: -10px;
+                }
+            }
+        }
+    }
+    .right{
+        .item1{
+            background: #fff;
+            border: 1px solid #ebebeb;
+            border-radius: 10px;
+            padding: 40px 25px;
+            margin-bottom: 30px;
+            h3{
+                @include f($ff, 20px, 900, 1.2, #0a303a)
+            }
+            .bt{
+                background: #f04336;
+                width: 100%;
+                border: medium none;
+                border-radius: 3px;
+                color: #fff;
+                display: inline-flex;
+                align-items: center;
+                font-size: 20px;
+                font-weight: 800;
+                letter-spacing: 0;
+                line-height: 1;
+                padding: 18px 40px;
+                text-align: center !important;
+                justify-content: center;
+                text-transform: capitalize;
+                touch-action: manipulation;
+                transition: all 0.3s ease 0s;
+                vertical-align: middle;
+                white-space: nowrap;
+                font-family: 'Nunito', sans-serif;
+                position: relative;
+                overflow: hidden;
+                img{
+                    width: 20px;
+                    margin-left: 10px;
+                    height: auto;
+                    z-index: 1;
+                }
+                span{
+                    z-index: 1;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 56px;
+                    left: -180px;
+                    width: 200%;
+                    height: 200%;
+                    border-radius: 50%;
+                    background: #0A303A;
+                    transition: .4s;
+                }
+                &:hover::after{
+                    top: -10px;
+                }
+            }
+            form{
+                input{
+                    width: 100%;
+                    border: 1px solid #e1e1e1;
+                    border-radius: 6px;
+                    font-size: 14px;
+                    padding: 14px 20px 14px 40px;
+                    min-height: 51px;
+                    color: #818080;
+                    text-align: left;
+                    text-transform: capitalize;
+                    margin-bottom: 17px;
+                }
+                .search{
+                    position: relative;
+                    a{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        background-color: #f04336;
+                        color: #fff;
+                        width: 47px;
+                        height: 51px;
+                        border-radius: 6px;
+                        .i{
+                            position: absolute;
+                            text-align: center;
+                            color: #fff;
+                            font-size: 16px;
+                            top: 50%;
+                            left: 44%;
+                            transform: translate(-50%,-50%);
+                        }
+                    }
+                }
+                .location{
+                    position: relative;
+                    .gps{
+                        position: absolute;
+                        left: 15px;
+                        top: 38%;
+                        transform: translateY(-50%);
+                        font-size: 14px;
+                        line-height: 1;
+                        color: #818080;
+                    }
+                }
+                .two{
+                    display: flex;
+                    justify-content: space-between;
+                    .left{
+                        width: 48%;
+                        position: relative;
+                        .lt{
+                            position:absolute;
+                            left: 15px;
+                            top: 38%;
+                            transform: translateY(-50%);
+                            font-size: 14px;
+                            line-height: 1;
+                            color: #818080;
+                        }
+                    }
+                    .right{
+                        width: 48%;
+                        position: relative;
+                        .rt{
+                            position:absolute;
+                            left: 15px;
+                            top: 38%;
+                            transform: translateY(-50%);
+                            font-size: 14px;
+                            line-height: 1;
+                            color: #818080;
+                        }
+                    }
+                }
+                .form-grp{
+                    position: relative;
+                    .on{
+                        position: absolute;
+                        left: 15px;
+                        top: 38%;
+                        transform: translateY(-50%);
+                        font-size: 14px;
+                        line-height: 1;
+                        color: #818080;
+                    }
+                    select{
+                        width: 100%;
+                        border: 1px solid #e1e1e1;
+                        border-radius: 6px;
+                        font-size: 14px;
+                        padding: 17px 35px 17px 40px;
+                        font-weight: 400;
+                        color: #818080;
+                        margin-bottom: 17px;
+                        text-transform: capitalize;
+                        box-sizing: border-box;
+                        clear: both;
+                        cursor: pointer;
+                        display: inline-block;
+                        font-family: inherit;
+                        height: auto;
+                        line-height: 1;
+                        outline: none;
+                        position: relative;
+                        text-align: left !important;
+                        user-select: none;
+                        white-space: nowrap;
+                        background: transparent !important;
+                        .focus{
+                            background-color: #f6f6f6 !important;
+                        }
+                    }
+                }
+            }
+        }
+        .item2{
+            background: #143556;
+            border-radius: 10px;
+            padding: 45px 45px 50px;
+            text-align: center;
+            .img{
+                h2{
+                    @include f($ff, 26px, 800, 1.2, #fff);
+                    margin-bottom: 13px;
+                }
+                h3{
+                    @include f($ffh, 14px, 500, 1.4, #fff);
+                }
+            }
+            .btn{
+                form{
+                    input{
+                        width: 100%;
+                        font-size: 14px;
+                        text-align: center;
+                        border: none;
+                        background: #fff;
+                        padding: 19px 25px;
+                        border-radius: 10px;
+                        margin-bottom: 10px;
+                    }
+                    .buton{
+                        width: 100%;
+                        justify-content: center;
+                        font-size: 18px;
+                        border-radius: 10px;
+                        min-height: 59px;
+                        user-select: none;
+                        background: #f04336 none repeat scroll 0 0;
+                        border: medium none;
+                        letter-spacing: 0;
+                        line-height: 1;
+                        margin-bottom: 0;
+                        padding: 17px 25px;
+                        text-align: center;
+                        text-transform: capitalize;
+                        touch-action: manipulation;
+                        transition: all 0.3s ease 0s;
+                        vertical-align: middle;
+                        white-space: nowrap;
+                        font-family: 'Nunito', sans-serif;
+                        position: relative;
+                        z-index: 1;
+                        overflow: hidden;
+                        color: #fff;
+                        font-weight: 800;
+                    }
+                }
+            }
+        }
+    }
+}

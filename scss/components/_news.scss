@@ -1,0 +1,136 @@
+@import '../variable/variables';
+@import '../mixin/mixins';
+
+#news-part{
+    padding: 100px 0;
+    position: relative;
+    .paw{
+        width: 28px;
+        display: inline-block;
+        position: absolute;
+        top: 70px;
+        left: 49%;
+        transform: translateX(-50%) rotate(0deg);
+        animation: paw 1s infinite alternate;
+    }
+    @keyframes paw {
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(20deg);
+        }
+        
+    }
+    .tittle{
+        .bh3{
+            margin-top: 0;
+        }
+        .bh{
+            margin-bottom: 40px;
+        }
+        p{
+            @include f($ff, 16px, 400, 28px, #676666);
+            text-align: center;
+            width: 50%;
+            margin: 0 auto;
+            margin-bottom: 80px;
+        }
+    }
+    .bottom{
+        .item{
+            .img{
+                margin-bottom: 25px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                img{
+                    width: 100%;
+                    transform: scale(1);
+                    transition: .4s;
+                }
+                .shape{
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+                    a{
+                        @include f($ff, 18px, 800, 1.5, #f04336);
+                        background: url(../images/news_shape.png) no-repeat center;
+                        background-size: cover;
+                        display: inline-flex;
+                        align-items: center;
+                        min-width: 138px;
+                        min-height: 53px;
+                        justify-content: center;
+                        padding: 12px 12px;
+                        border-radius: 7px;
+                        margin-left: 5px;
+                        i{
+                            margin-right: 8px;
+                        }
+                        &:hover{
+                            color: #0a303a;;
+                        }
+                    }
+                }
+            }
+            .text{
+                ul{
+                    padding-left: 0;
+                    li{
+                        @include f($ff, 14px, 400, 1, #838181);
+                        margin-right: 20px;
+                        display: inline-block;
+                        -webkit-font-smoothing: antialiased;
+                        display: inline-block;
+                        font-style: normal;
+                        font-variant: normal;
+                        text-rendering: auto;
+                        i{
+                            margin-right: 5px;
+                        }
+                        a{
+                            color: #838181;
+                            transition: .4s;
+                            &:hover{
+                                color: #f04336;
+                            }
+                        }
+                    }
+                }
+                h5{
+                    @include f($ff, 24px, 900, 1.2, #0a303a);
+                    margin-bottom: 15px;
+                    margin-top: 0px;
+                    font-style: normal;
+                    text-transform: inherit;
+                    a{
+                        color: #0a303a;
+                        transition: .4s;
+                        &:hover{
+                            color: #f04336;
+                        }
+                    }
+                }
+                p{
+                    margin-bottom: 22px;
+                    @include f($ff, 16px, 400, 28px, #676666);
+                }
+                a{
+                    @include f($ff, 18px, 800, 1.5, #f04336);
+                    display: inline-flex;
+                    align-items: center;
+                    img{
+                        max-width: 20px;
+                        transform: rotate(90deg);
+                        margin-left: 6px;
+                    }
+                }
+            }
+            &:hover .img img{
+                transform: scale(1.1);
+            }
+        }
+            
+    }
+}

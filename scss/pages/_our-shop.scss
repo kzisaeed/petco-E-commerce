@@ -1,0 +1,393 @@
+@import '../variable/variables';
+@import '../mixin/mixins';
+
+#shop-details{
+    margin: 110px 0;
+    aside{
+        margin-right: 20px;
+        .form{
+            margin-bottom: 40px;
+            form{
+                position: relative;
+                input{
+                    width: 100%;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 18px 70px 18px 25px;
+                    font-size: 14px;
+                    height: 60px;
+                    background: #f5f2eb;
+                    text-align: left;
+                }
+                .submit{
+                    position: absolute;
+                    top: -20px;
+                    right: -79px;
+                    background: #f04336;
+                    width: 56px;
+                    height: 60px;
+                    border: 0;
+                    border-radius: 5px;
+                    i{
+                        color: #fff;
+                        font-size: 14px;
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+        .list{
+            margin-bottom: 40px;
+            h4{
+                @include f($ff, 20px, 800, 1, #0a303a);
+                margin-bottom: 19px;
+                margin-top: 0px;
+                font-style: normal;
+                text-transform: inherit;
+            }
+            ul{
+                border: 1px solid #ebebeb;
+                margin: 0px;
+                padding: 0px;
+                li{
+                    a{
+                        font-family: 'Poppins', sans-serif;
+                        line-height: 1.5;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: #676666;
+                        font-size: 14px;
+                        font-weight: 500;
+                        padding: 14px 18px;
+                        border: 1px solid #ebebeb;
+                        transition: .4s;
+                        &:hover{
+                            color: #0a303a;
+                            background: #f5f2eb;
+                            span{
+                                color: #f04336;
+                            }
+                        }
+                        span{
+                            font-size: 18px;
+                            transition: .4s;
+                        }
+                    }
+                }
+            }
+        }
+        .brand{
+            margin-bottom: 40px;
+            h4{
+                @include f($ff, 20px, 800, 1, #0a303a);
+                margin-bottom: 19px;
+                margin-top: 0px;
+                font-style: normal;
+                text-transform: inherit;
+            }
+            ul{
+                margin: 0px;
+                padding: 0px;
+                li{
+                    a{
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 14px;
+                        color: #676666;
+                        line-height: 26px;
+                        font-weight: 500;
+                        transition: .4s;
+                        i{
+                            font-weight: 700;
+                            font-size: 12px;
+                            padding-right: 20px;
+                        }
+                        &:hover{
+                            color: #f04336;
+                        }
+                    }
+                }
+            }
+        }
+        .range{
+            margin-bottom: 40px;
+            h4{
+                @include f($ff, 20px, 800, 1, #0a303a);
+                margin-bottom: 19px;
+                margin-top: 0px;
+                font-style: normal;
+                text-transform: inherit;
+            }
+            .price-input{
+                width: 100%;
+                display: flex;
+                .field{
+                    height: 45px;
+                    width: 100%;
+                    display: flex;
+                    text-align: center;
+                    
+                    input{
+                        width: 100%;
+                        height: 100%;
+                        outline: none;
+                        font-size: 13px;
+                        border: none;
+                    }
+                    
+                }
+                .seperator{
+                    width: 130px;
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                }
+            }
+            .slider{
+                height: 5px;
+                background: #ddd;
+                position: relative;
+                .progress{
+                    height: 5px;
+                    background: #f04336;
+                    position: absolute;
+                    left: 25%;
+                    right: 25%;
+                }
+            }
+        }
+        .img{
+            a{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .hh4{
+        @include f($ff, 24px, 900, 1.2, #0a303a);
+        margin-bottom: 20px;
+        margin-top: 0px;
+        font-style: normal;
+        text-transform: inherit;
+    }
+    .shop-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        background: #f5f2eb;
+        border-radius: 6px;
+        border: 1px solid #ebebeb;
+        padding: 14px 12px 14px;
+        margin-bottom: 25px;
+        .left{
+            display: flex;
+            .icons{
+                a{
+                    display: inline-block;
+                    background: #fff;
+                    border: 1px solid #e1e1e1;
+                    width: 33px;
+                    height: 32px;
+                    line-height: 32px;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 16px;
+                    color: #111e49;
+                    border-radius: 3px;
+                }
+                .active{
+                    margin-right: 9px;
+                    border-color: #f04336;
+                    color: #fff;
+                    background: #f04336;
+                }
+            }
+            h6{
+                @include f(ff, 13px, 500, 28px, #0a303a);
+                margin: 0 32px;
+                margin-top: 6px
+            }
+            h5{
+                @include f(ff, 13px, 500, 1.5, #0a303a);
+                margin-right: 10px;
+            }
+            .list{
+                form{
+                    label{
+                        @include f(ff, 13px, 500, 1.5, #0a303a);
+                        margin-bottom: 0;
+                        margin-right: 10px;
+                    }
+                    select{
+                        border: 1px solid #e1e1e1;
+                        background: #fff;
+                        padding: 8px 0 8px 11px;
+                        min-width: 54px;
+                        font-size: 13px;
+                        font-weight: 500;
+                        color: #111e49;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+        .right{
+            form{
+                label{
+                    @include f(ff, 13px, 500, 1.5, #0a303a);
+                    margin-bottom: 0;
+                    margin-right: 10px;
+                }
+                select{
+                    border: 1px solid #e1e1e1;
+                    background: #fff;
+                    padding: 8px 0 8px 11px;
+                    min-width: 140px;
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: #111e49;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+    .details{
+        margin-bottom: 25px;
+        .item{
+            .img{
+                margin-bottom: 25px;
+                img{
+                    width: 100%;
+                }
+            }
+            h6{
+                @include f($ff, 12px, 600, 1, #676666);
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+            .a{
+                @include f($ff, 20px, 800, 1.2, #0a303a);
+                transition: .4s;
+                &:hover{
+                    color: #f04336;
+                }
+            }
+            .under{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 16px;
+                .price{
+                    @include f($ff, 16px, 600, 1, #282828);
+                }
+                .add{
+                    a{
+                        @include f($ff, 14px, 700, 1, #f04336);
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .shop-menu2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        background: #f5f2eb;
+        border-radius: 6px;
+        border: 1px solid #ebebeb;
+        padding: 14px 12px 6px;
+        margin-bottom: 25px;
+        .left{
+            display: flex;
+            .icons{
+                a{
+                    display: inline-block;
+                    background: #fff;
+                    border: 1px solid #e1e1e1;
+                    width: 33px;
+                    height: 32px;
+                    line-height: 32px;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 16px;
+                    color: #111e49;
+                    border-radius: 3px;
+                }
+                .active{
+                    margin-right: 9px;
+                    border-color: #f04336;
+                    color: #fff;
+                    background: #f04336;
+                }
+            }
+            h6{
+                @include f(ff, 13px, 500, 28px, #0a303a);
+                margin: 0 32px;
+                margin-top: 6px
+            }
+            h5{
+                @include f(ff, 13px, 500, 1.5, #0a303a);
+                margin-right: 10px;
+            }
+            .list{
+                form{
+                    label{
+                        @include f(ff, 13px, 500, 1.5, #0a303a);
+                        margin-bottom: 0;
+                        margin-right: 10px;
+                    }
+                    select{
+                        border: 1px solid #e1e1e1;
+                        background: #fff;
+                        padding: 8px 0 8px 11px;
+                        min-width: 54px;
+                        font-size: 13px;
+                        font-weight: 500;
+                        color: #111e49;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+        .right{
+            ul{
+                li{
+                    display: inline-block;
+                    margin-left: 8px;
+                    margin-top: 5px;
+                    a{
+                        display: inline-block;
+                        align-items: center;
+                        justify-content: center;
+                        width: 33px;
+                        height: 32px;
+                        line-height: 32px;
+                        background: #fff;
+                        border: 1px solid #e1e1e1;
+                        text-align: center;
+                        border-radius: 3px;
+                        font-size: 13px;
+                        color: #676666;
+                        font-weight: 500;
+                        transition: .4s;
+                        &:hover{
+                            background: #f04336;
+                            color: #fff;
+                            border: 1px solid #f04336;
+                        }
+                    }
+                    .active2{
+                        background: #f04336;
+                        color: #fff;
+                        border: 1px solid #f04336;
+                    }
+                }
+            }
+        }
+    }
+}

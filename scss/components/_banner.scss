@@ -1,0 +1,275 @@
+@import '../variable/variables';
+@import '../mixin/mixins';
+
+#banner-part{
+    position: relative;
+    .img1{
+        position: absolute;
+        top: 200px;
+        left: 840px;
+        z-index: 1;
+        animation: pa1 .8s infinite alternate;
+    }
+    @keyframes pa1 {
+        from{
+            transform: rotate(0deg);
+        }to{
+            transform: rotate(15deg);
+        }
+    }
+    .img2{
+        position: absolute;
+        top: 575px;
+        left: 650px;
+        z-index: 1;
+        width: 20px;
+        transform: rotate(-20deg);
+        animation: pa2 .8s infinite alternate;
+    }
+    @keyframes pa2 {
+        from{
+            transform: rotate(-20deg);
+        }to{
+            transform: rotate(-10deg);
+        }
+    }
+    .slick-current{
+        .h2{
+            animation: heading .6s;
+        }
+        .p{
+            animation: para .8s;
+        }
+        .bt{
+            animation: btn 1.2s;
+        }
+    }
+    .banner1{
+        background: url(../images/banner1.jpg) no-repeat center;
+        background-size: cover;
+        height: 760px;
+        .banner-text{
+            margin-top: 300px;
+            width: 40%;
+            .top{
+                margin-bottom: 20px;
+                overflow: hidden;
+                height: 137px;
+                h2{
+                    @include f($ff, 57px, 900, 1.2, #fff);
+                    text-align: left;
+                    span{
+                        position: relative;
+                        background: url(../images/banner_text_shape.svg);
+                        z-index: 1;
+                        background-size: cover;
+                        background-position: top center;
+                        padding: 11px 20px;
+                        display: inline-flex;
+                        line-height: .8;
+                        margin-top: 0;
+                    }
+                }
+                @keyframes heading {
+                    from{
+                        margin-top: 200px;
+                    }to{
+                        margin-top: 0;
+                        opacity: 1;
+                    }
+                }
+                
+            }
+            .middle{
+                margin-bottom: 40px;
+                overflow: hidden;
+                height: 60px;
+                p{
+                    @include f($ff, 18px, 700, 30px, #fff);
+                    margin-bottom: 15px;
+                    width: 95%;
+                }
+                @keyframes para {
+                    from{
+                        margin-top: 400px;
+                    }to{
+                        margin-top: 0;
+                        opacity: 1;
+                    }
+                }
+            }
+            .bottom{
+                overflow: hidden;
+                position: relative;
+                height: 60px;
+                a{
+                    background: #f04336;
+                    border: medium none;
+                    border-radius: 3px;
+                    color: #fff;
+                    display: inline-flex;
+                    align-items: center;
+                    font-size: 20px;
+                    font-weight: 800;
+                    letter-spacing: 0;
+                    line-height: 1;
+                    padding: 17px 25px;
+                    text-align: center;
+                    text-transform: capitalize;
+                    touch-action: manipulation;
+                    transition: all 0.3s ease 0s;
+                    vertical-align: middle;
+                    white-space: nowrap;
+                    font-family: 'Nunito', sans-serif;
+                    position: relative;
+                    overflow: hidden;
+                    img{
+                        width: 20px;
+                        margin-left: 10px;
+                        height: auto;
+                        z-index: 1;
+                    }
+                    span{
+                        z-index: 1;
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        top: 56px;
+                        left: -92px;
+                        width: 200%;
+                        height: 200%;
+                        border-radius: 50%;
+                        background: #0A303A;
+                        transition: .4s;
+                    }
+                    &:hover::after{
+                        top: -10px;
+                    }
+                }
+                @keyframes btn {
+                    from{
+                        margin-top: 600px;
+                    }to{
+                        margin-top: 0;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    .banner2{
+        background: url(../images/banner2.jpg) no-repeat center;
+        background-size: cover;
+        height: 778px;
+        .banner-text{
+            margin-top: 300px;
+            width: 40%;
+            .top{
+                margin-bottom: 20px;
+                overflow: hidden;
+                height: 137px;
+                h2{
+                    @include f($ff, 57px, 900, 1.2, #fff);
+                    text-align: left;
+                    span{
+                        position: relative;
+                        background: url(../images/banner_text_shape.svg);
+                        z-index: 1;
+                        background-size: cover;
+                        background-position: top center;
+                        padding: 11px 20px;
+                        display: inline-flex;
+                        line-height: .8;
+                        margin-top: 0;
+                    }
+                }
+                @keyframes heading {
+                    from{
+                        margin-top: 200px;
+                    }to{
+                        margin-top: 0;
+                        opacity: 1;
+                    }
+                }
+                
+            }
+            .middle{
+                margin-bottom: 40px;
+                overflow: hidden;
+                height: 60px;
+                p{
+                    @include f($ff, 18px, 700, 30px, #fff);
+                    margin-bottom: 15px;
+                    width: 95%;
+                }
+                @keyframes para {
+                    from{
+                        margin-top: 400px;
+                    }to{
+                        margin-top: 0;
+                        opacity: 1;
+                    }
+                }
+            }
+            .bottom{
+                overflow: hidden;
+                position: relative;
+                height: 60px;
+                a{
+                    background: #f04336;
+                    border: medium none;
+                    border-radius: 3px;
+                    color: #fff;
+                    display: inline-flex;
+                    align-items: center;
+                    font-size: 20px;
+                    font-weight: 800;
+                    letter-spacing: 0;
+                    line-height: 1;
+                    padding: 17px 25px;
+                    text-align: center;
+                    text-transform: capitalize;
+                    touch-action: manipulation;
+                    transition: all 0.3s ease 0s;
+                    vertical-align: middle;
+                    white-space: nowrap;
+                    font-family: 'Nunito', sans-serif;
+                    position: relative;
+                    overflow: hidden;
+                    img{
+                        width: 20px;
+                        margin-left: 10px;
+                        height: auto;
+                        z-index: 1;
+                    }
+                    span{
+                        z-index: 1;
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        top: 56px;
+                        left: -92px;
+                        width: 200%;
+                        height: 200%;
+                        border-radius: 50%;
+                        background: #0A303A;
+                        transition: .4s;
+                    }
+                    &:hover::after{
+                        top: -10px;
+                    }
+                }
+                @keyframes btn {
+                    from{
+                        margin-top: 600px;
+                    }to{
+                        margin-top: 0;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

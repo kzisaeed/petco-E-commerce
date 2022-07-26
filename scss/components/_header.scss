@@ -1,0 +1,27 @@
+@import '../variable/variables';
+@import '../mixin/mixins';
+
+header{
+    background: #F4F1EA;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 0 0 20px 20px;
+    padding: 9px 0;
+    ul{
+        margin-bottom: 0;
+        li{
+            display: inline-block;
+            @include f( $ffh, 13px, 400, 19.5px, $c);
+            margin-right: 15px;
+            i{
+                margin-right: 7px;
+                font-weight: 400;
+            }
+            a{
+                color: #0a303a;
+                font-size: 12px;
+            }
+            
+        }
+    }
+}

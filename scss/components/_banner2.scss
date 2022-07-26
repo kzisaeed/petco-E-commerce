@@ -1,0 +1,43 @@
+@import '../variable/variables';
+@import '../mixin/mixins';
+
+#banner2{
+    background: url(../images/breadcrumb_bg.jpg) no-repeat center;
+    background-size: cover;
+    padding: 115px 0;
+    .a{
+        h3{
+            @include f($ff, 36px, 900, 1.1, #fff);
+        display: inline-flex;
+        margin-bottom: 18px;
+        line-height: 1.1;
+        clip-path: polygon(0 0, 100% 0, 91% 100%, 0% 100%);
+        padding: 13px 40px 13px 20px;
+        background: #f04336;
+        border-radius: 15px 15px 40px 15px;
+        }
+    }
+    ul{
+        li{
+            @include f($ff, 16px, 700, 1.5, #fff);
+            display: inline-block;
+            text-transform: capitalize;
+            padding-right: 10px;
+            a{
+                @include f($ff, 16px, 700, 1.5, #f04336);
+                text-transform: capitalize;
+            }
+        }
+        .sh{
+            padding-left: 10px;
+            position: relative;
+            &::after{
+                position: absolute;
+                left: -15px;
+                padding-left: 10px;
+                color: #f04336;
+                content: "|";
+            }
+        }
+    }
+}

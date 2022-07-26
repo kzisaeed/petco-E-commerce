@@ -1,0 +1,103 @@
+@import '../variable/variables';
+@import '../mixin/mixins';
+
+#newsletter-part{
+    padding-bottom: 110px;
+    .item{
+        background: url(../images/newsletter_bg.jpg) no-repeat center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        border: 1.5px solid #0a303a;
+        border-radius: 15px;
+        padding: 65px 85px 65px 60px;
+        position: relative;
+        .left{
+            .h{
+                @include f($ff, 40px, 900, 1.1, #fff);
+                margin-bottom: 8px;
+                margin-top: 0px;
+                font-style: normal;
+                text-transform: inherit;
+            }
+            p{
+                @include f($ff, 14px, 600, 1.5, #fff);
+                margin-bottom: 0;
+                display: flex;
+                align-items: self-end;
+                span{
+                    @include f($ff, 20px, 900, .6, #fff);
+                    margin-right: 8px;
+                }
+            }
+        }
+        .right{
+            width: 65.5%;
+            flex: 0 0 65.5%;
+            text-align: left;
+            margin-left: auto;
+            form{
+                display: flex;
+                align-items: center;
+                input{
+                    flex-grow: 1;
+                    border: none;
+                    background: #fff;
+                    clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
+                    padding: 21px 30px;
+                    color: #676666;
+                    font-size: 14px;
+                    border-radius: 10px 10px 35px 10px;
+                    align-items: center;
+                    text-align: left;
+                }
+                .btn{
+                    @include f($ff, 20px, 800, 1, #f04336);
+                    background: #fff;
+                    min-width: 219px;
+                    text-align: center;
+                    justify-content: center;
+                    padding: 21px 30px;
+                    min-height: 63px;
+                    clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+                    border-radius: 35px 10px 10px 10px;
+                    position: relative;
+                    overflow: hidden;
+                    border: none;
+                    margin-right: 0;
+                    margin-top: 0;
+                    letter-spacing: 0;
+                    touch-action: manipulation;
+                    z-index: 1;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        transition-duration: 800ms;
+                        width: 200%;
+                        height: 200%;
+                        top: 110px;
+                        left: 50%;
+                        background: #0a303a;
+                        transform: translateX(-50%);
+                        border-radius: 50%;
+                        z-index: -1;
+                        transition: .4s;
+                    }
+                    &:hover::after{
+                        top: -10px;
+                    }
+                }
+            }
+        }
+        .shape1{
+            position: absolute;
+            top: 30px;
+            left: -120px;
+        }
+        .shape2{
+            position: absolute;
+            top: 0;
+            right: -141px;
+        }
+    }
+}

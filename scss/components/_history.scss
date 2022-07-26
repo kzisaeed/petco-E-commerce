@@ -1,0 +1,162 @@
+@import '../variable/variables';
+@import '../mixin/mixins';
+
+
+#history-part{
+    background: #d5e6eb;
+    position: relative;
+    padding: 110px 0 110px;
+    z-index: 1;
+    padding-bottom: 0;
+    .topshape{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .bottomshape{
+        position: absolute;
+        bottom: 273px;
+        left: 0;
+    }
+    .headshape{
+        position: absolute;
+        bottom: 289px;
+        right: 138px;
+    }
+    button {
+        margin: 0;
+    }
+    .item{
+        position: relative;
+        .img2{
+            position: absolute;
+            top: 175px;
+            left: 35px;
+            z-index: -1;
+        }
+        a{
+            display: inline-block;
+            width: 94px;
+            height: 94px;
+            border-radius: 50%;
+            background: transparent;
+            position: absolute;
+            top: 183px;
+            right: 105px;
+            
+        }
+        
+    }
+    .item2{
+        margin-top: 20px;
+        h4{
+            @include f($ff, 24px, 800, 1, #f04336);
+            margin-bottom: 12px;
+            margin-top: 0px;
+            font-style: normal;
+            text-transform: inherit;
+        }
+        h2{
+            margin: 0;
+            padding-bottom: 10px;
+            
+        }
+        .h{
+            @include f($ff, 45px, 900, 1.2, #0a303a);
+            margin-bottom: 22px;
+            margin-top: 0px;
+            font-style: normal;
+            text-transform: inherit;
+            text-align: left;
+        }
+        .accordion-item {
+            background-color: #fff;
+            border: none;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+        .accordion-button {
+            @include f($ff, 20px, 900, 1.4, #0a303a);
+            position: relative;
+            display: inline-block;
+            align-items: center;
+            width: 100%;
+            padding: 1rem 1.25rem;
+            color: #212529;
+            text-align: left;
+            background-color: #fff;
+            border: 0;
+            border-radius: 0;
+            overflow-anchor: none;
+            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius .15s ease;
+            &:not(.collapsed) {
+                color: none;
+                background-color: transparent;
+                box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+                
+            }
+            .accordion-body{
+                .strong{
+                    font-size: 16px;
+                color: #676666;
+                line-height: 28px;
+                }
+            }
+           .icon{
+            position: absolute;
+            top: -15px;
+            right: 10px;
+            &::after{
+                position: absolute;
+                content: "-";
+                top: 16px;
+                right: 25px;
+                width: 40px;
+                height: 37px;
+                text-align: center;
+                line-height: 37px;
+                font-size: 30px;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 900;
+                color: #fff;
+                border-radius: 47% 53% 61% 39% / 38% 38% 62% 62%;
+                background: #f04336;
+                transition: .3s linear;
+                }
+            }
+            
+            
+        }
+        .collapsed{
+            .icon{
+                position: absolute;
+                top: -15px;
+                right: 10px;
+                &::after{
+                    position: absolute;
+                    content: "+";
+                    top: 16px;
+                    right: 25px;
+                    width: 40px;
+                    height: 37px;
+                    text-align: center;
+                    line-height: 37px;
+                    font-size: 30px;
+                    font-family: 'Nunito', sans-serif;
+                    font-weight: 900;
+                    color: #f04336;
+                    border-radius: 47% 53% 61% 39% / 38% 38% 62% 62%;
+                    background: #d5e6eb;
+                    transition: .3s linear;
+                }
+            }
+        }
+        
+    }
+    .bottom{
+        margin-top: 100px;
+        background: black;
+        padding: 100px 0;
+    }
+    
+}

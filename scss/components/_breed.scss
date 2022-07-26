@@ -1,0 +1,167 @@
+@import '../variable/variables';
+@import '../mixin/mixins';
+
+
+#breed-part{
+    
+    position: relative;
+    margin-bottom: 100px;
+    .paw{
+        width: 28px;
+        display: inline-block;
+        position: absolute;
+        top: 165px;
+        left: 49%;
+        transform: translateX(-50%) rotate(0deg);
+        animation: paw 1s infinite alternate;
+    }
+    @keyframes paw {
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(20deg);
+        }
+        
+    }
+    .tittle{
+        .bh{
+            margin-bottom: 40px;
+        }
+        p{
+            @include f($ff, 16px, 400, 28px, #676666);
+            text-align: center;
+            width: 50%;
+            margin: 0 auto;
+            margin-bottom: 80px;
+        }
+    }
+    .bottom{
+        
+        .breed-slider{
+            .next{
+                display: none !important;
+            }
+            .prev{
+                background: url(../images/arrow_bg.png) no-repeat center;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                top: 45%;
+                left: -130px;
+                transform: translateY(-50%);
+                transition: .4s;
+                &:hover img{
+                    filter: brightness(100);
+                }
+                img{
+                    width: 100%;
+                    position: absolute;
+                    top: 18px;
+                    left: 22px;
+                    transform: rotate(180deg);
+                    transition: .4s;
+                }
+            }
+            .item{
+                position: relative;
+                .shape{
+                    @include f($ff, 22px, 900, 1, #f04336);
+                    position: absolute;
+                    bottom: 10px;
+                    left: 45%;
+                    transform: translateX(-50%);
+                    background: url(../images/breed_shape.svg) no-repeat center;
+                    background-size: cover;
+                    padding: 14px;
+                    a{
+                        color: #f04336 !important;
+                    }
+                }
+                .shape2{
+                    padding: 11px;
+                }
+            }
+            
+        }
+        .item2{
+            background: url(../images/breed_services_bg.jpg) no-repeat center;
+            background-size: cover;
+            padding: 53px 50px;
+            border-radius: 4px;
+            min-height: 100%;
+            text-align: left;
+            h5{
+                @include f($ff, 18px, 900, 1, #fff);
+                margin-bottom: 13px;
+                font-size: 18px;
+                padding-left: 10px;
+                border-left: 3px solid #fff;
+                line-height: 1;
+                margin-top: 0px;
+                font-style: normal;
+            }
+            h4{
+                @include f($ff, 40px, 900, 1.1, #fff);
+                margin-bottom: 12px;
+                margin-top: 0px;
+                font-style: normal;
+                text-transform: inherit;
+            }
+            p{
+                @include f($ff, 16px, 400, 28px, #fff);
+                width: 81%;
+                text-align: left;
+                margin: 0;
+                margin-bottom: 30px;
+            }
+            a{
+                background: #fff;
+                border: medium none;
+                border-radius: 3px;
+                color: #f04336;
+                display: inline-flex;
+                align-items: center;
+                font-size: 20px;
+                font-weight: 800;
+                letter-spacing: 0;
+                line-height: 1;
+                padding: 17px 25px;
+                text-align: center;
+                text-transform: capitalize;
+                touch-action: manipulation;
+                transition: all 0.3s ease 0s;
+                vertical-align: middle;
+                white-space: nowrap;
+                font-family: 'Nunito', sans-serif;
+                position: relative;
+                overflow: hidden;
+                img{
+                    width: 20px;
+                    margin-left: 10px;
+                    height: auto;
+                    z-index: 1;
+                    filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+                }
+                span{
+                    z-index: 1;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 56px;
+                    left: -92px;
+                    width: 200%;
+                    height: 200%;
+                    border-radius: 50%;
+                    background: #0A303A;
+                    transition: .4s;
+                }
+                &:hover::after{
+                    top: -10px;
+                }
+            }
+        }
+        
+    }
+}

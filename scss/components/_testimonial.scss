@@ -1,0 +1,131 @@
+@import '../variable/variables';
+@import '../mixin/mixins';
+
+#testimonial-part{
+    position: relative;
+    background: url(../images/testimonial_bg.jpg) no-repeat center;
+    background-size: cover;
+    padding: 100px 0;
+    .img{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .paw{
+        width: 28px;
+        display: inline-block;
+        position: absolute;
+        top: 70px;
+        left: 49%;
+        transform: translateX(-50%) rotate(0deg);
+        animation: paw 1s infinite alternate;
+    }
+    @keyframes paw {
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(20deg);
+        }
+        
+    }
+    .tittle{
+        .bh3{
+            margin-top: 0;
+        }
+        .bh{
+            margin-bottom: 40px;
+        }
+        p{
+            @include f($ff, 16px, 400, 28px, #676666);
+            text-align: center;
+            width: 50%;
+            margin: 0 auto;
+            margin-bottom: 80px;
+        }
+    }
+    .bottom{
+        .slick-dots{
+            position: absolute;
+            bottom: -50px;
+            left: 49%;
+            transform: translateX(-50%);
+            li{
+                display: inline-block;
+                
+                button{
+                    width: 23px;
+                    height: 8px;
+                    background: #0a303a;
+                    border-radius: 4px;
+                    font-size: 0;
+                    margin: 0 5px;
+                    text-indent: -99999px;
+                }
+            }
+            .slick-active{
+                background: #f04336;
+                width: 40px;
+                height: 8px;
+                border-radius: 4px;
+                text-indent: -99999px;
+                margin: 0 5px;
+                font-size: 0;
+            }
+        }
+        .item{
+            background-image: url(../images/testimonial.svg);
+            background-repeat: no-repeat;
+            padding: 35px 40px 40px 50px;
+            align-items: flex-start;
+            min-height: 260px;
+            background-position: top center;
+            background-size: cover;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            
+            i{
+                position: absolute;
+                bottom: 75px;
+                right: 100px;
+                font-size: 42px;
+                color: #f04336;
+                line-height: 1;
+            }
+            .left{
+                margin-right: 30px;
+                img{
+                    border: 7px solid #f4f1ea;
+                    border-radius: 50%;
+                }
+            }
+            .right{
+                p{
+                    @include f($ff, 16px, 400, 28px, #676666);
+                    margin-bottom: 23px;
+                    width: 80%
+                }
+                h5{
+                    @include f($ff, 20px, 900, 1.2, #0a303a);
+                    margin-top: 0px;
+                    font-style: normal;
+                    text-transform: inherit;
+                    font-size: 20px;
+                    margin-bottom: 6px;
+                    span{
+                        @include f($ff, 13px, 400, 1.5, #676666);
+                        display: block;
+                        font-style: normal;
+                    }
+                }
+            }
+        }
+    }
+    .img2{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: rotate(180deg);
+    }
+}
